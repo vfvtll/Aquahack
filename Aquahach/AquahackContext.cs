@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Data.SqlClient;
 namespace Aquahach
 {
-    public class AquahacContextcs : DbContext
+    public class AquahackContext : DbContext
     {
         public DbSet<Photo> Photos { get; set; }
         public DbSet<User> Users { get; set; }
