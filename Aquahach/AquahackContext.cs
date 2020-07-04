@@ -10,6 +10,8 @@ namespace Aquahach
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Plant> Plants { get; set; }
+        public DbSet<SoilItem> Soil { get; set; }
+        public DbSet<PlantOnSoil> PlantsOnSoil { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -31,8 +33,14 @@ namespace Aquahach
             };
             optionsBuilder.UseSqlServer(sqlString.ToString());
         }
-        
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+            modelBuilder.Entity<PlantOnSoil>()
+                .HasKey(c => new { c.PlantId, c.SoilId });
+
+        }
 
     }
 

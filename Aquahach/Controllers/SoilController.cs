@@ -10,7 +10,7 @@ namespace Aquahach.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PlantsController : ControllerBase
+    public class SoilController : ControllerBase
     {
         [HttpGet("{id}")]
         public ActionResult Get(int id)
@@ -18,12 +18,10 @@ namespace Aquahach.Controllers
             try
             {
                 AquahackContext result = new AquahackContext();
-                var data = result.Plants.Where(c => c.Id == id).Include("PhotoOb");
-                var PlantOnSoil = result.PlantsOnSoil.Where(c => c.PlantId == id);
+                var data = result.Soil.Where(c => c.Id == id).Include("PhotoOb");
                 var response = new
                 {
-                    data = data.ToList(),
-                    SoilInformation = PlantOnSoil.ToList()
+                    data = data.ToList()
                 };
                 return Ok(response);
             }
@@ -43,7 +41,7 @@ namespace Aquahach.Controllers
             try
             {
                 AquahackContext result = new AquahackContext();
-                var data = result.Plants.Include("PhotoOb").Take(10);
+                var data = result.Soil.Include("PhotoOb").Take(10);
                 var response = new
                 {
                     data = data.ToList()
