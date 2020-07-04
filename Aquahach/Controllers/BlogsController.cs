@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Aquahach.EFDB;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Aquahach.Controllers
 {
@@ -18,7 +19,7 @@ namespace Aquahach.Controllers
             try
             {
                 AquahackContext result = new AquahackContext();
-                var data = result.Blogs.Take(10);
+                var data = result.Blogs.Include("PhotoOb").Take(10);
                 var response = new
                 {
                     data = data.ToList()
@@ -41,7 +42,7 @@ namespace Aquahach.Controllers
             try
             {
                 AquahackContext result = new AquahackContext();
-                var data = result.Blogs.Where(c => c.Id == id);
+                var data = result.Blogs.Where(c => c.Id == id).Include("PhotoOb");
                 var comments = result.Comments.Where(c => c.BlogId == id).Take(10);
                 var response = new
                 {
@@ -60,8 +61,7 @@ namespace Aquahach.Controllers
             }
         }
 
-
-        // POST api/values
+        
         [HttpPost]
         public void Post([FromBody] Blog data)
         {
@@ -80,8 +80,7 @@ namespace Aquahach.Controllers
 
             db.SaveChanges();
         }
-
-        // DELETE api/values/5
+        
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

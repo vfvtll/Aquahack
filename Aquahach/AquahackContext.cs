@@ -9,6 +9,8 @@ namespace Aquahach
         public DbSet<User> Users { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<Plant> Plants { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

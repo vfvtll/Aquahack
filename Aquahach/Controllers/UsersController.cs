@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Aquahach.EFDB;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Aquahach.Controllers
 {
@@ -18,7 +19,7 @@ namespace Aquahach.Controllers
             try
             {
                 AquahackContext result = new AquahackContext();
-                var data = result.Users.Where(c => c.Id == id);
+                var data = result.Users.Where(c => c.Id == id).Include("PhotoOb");
                 var response = new
                 {
                     data = data.ToList()
