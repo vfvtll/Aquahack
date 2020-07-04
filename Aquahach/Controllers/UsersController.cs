@@ -14,7 +14,7 @@ namespace Aquahach.Controllers
     {
         // GET api/values
         [HttpGet("{id}")]
-        public ActionResult<IEnumerable<string>> Get(int id)
+        public ActionResult Get(int id)
         {
             try
             {

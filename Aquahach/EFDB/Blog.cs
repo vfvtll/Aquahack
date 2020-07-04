@@ -8,7 +8,6 @@ namespace Aquahach.EFDB
     {
         [Key]
         public int Id { get; set; }
-        [Key]
         public int UserId { get; set; }
         [MaxLength(50)]
         public string Name { get; set; }
