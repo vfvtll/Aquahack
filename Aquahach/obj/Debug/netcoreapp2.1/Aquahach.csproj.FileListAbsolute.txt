@@ -1,0 +1,14 @@
+C:\Users\Owner\Desktop\Aquahach\Aquahach\bin\Debug\netcoreapp2.1\Aquahach.deps.json
+C:\Users\Owner\Desktop\Aquahach\Aquahach\bin\Debug\netcoreapp2.1\Aquahach.runtimeconfig.json
+C:\Users\Owner\Desktop\Aquahach\Aquahach\bin\Debug\netcoreapp2.1\Aquahach.runtimeconfig.dev.json
+C:\Users\Owner\Desktop\Aquahach\Aquahach\bin\Debug\netcoreapp2.1\Aquahach.dll
+C:\Users\Owner\Desktop\Aquahach\Aquahach\obj\Debug\netcoreapp2.1\Aquahach.csprojAssemblyReference.cache
+C:\Users\Owner\Desktop\Aquahach\Aquahach\obj\Debug\netcoreapp2.1\Aquahach.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Desktop\Aquahach\Aquahach\obj\Debug\netcoreapp2.1\Aquahach.RazorAssemblyInfo.cache
+C:\Users\Owner\Desktop\Aquahach\Aquahach\obj\Debug\netcoreapp2.1\Aquahach.RazorAssemblyInfo.cs
+C:\Users\Owner\Desktop\Aquahach\Aquahach\obj\Debug\netcoreapp2.1\Aquahach.AssemblyInfoInputs.cache
+C:\Users\Owner\Desktop\Aquahach\Aquahach\obj\Debug\netcoreapp2.1\Aquahach.AssemblyInfo.cs
+C:\Users\Owner\Desktop\Aquahach\Aquahach\obj\Debug\netcoreapp2.1\Aquahach.RazorTargetAssemblyInfo.cache
+C:\Users\Owner\Desktop\Aquahach\Aquahach\bin\Debug\netcoreapp2.1\Aquahach.pdb
+C:\Users\Owner\Desktop\Aquahach\Aquahach\obj\Debug\netcoreapp2.1\Aquahach.dll
+C:\Users\Owner\Desktop\Aquahach\Aquahach\obj\Debug\netcoreapp2.1\Aquahach.pdb
