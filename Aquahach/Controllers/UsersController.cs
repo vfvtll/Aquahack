@@ -12,7 +12,6 @@ namespace Aquahach.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        // GET api/values
         [HttpGet("{id}")]
         public ActionResult Get(int id)
         {
@@ -36,8 +35,7 @@ namespace Aquahach.Controllers
             }
         }
 
-
-        // POST api/values
+        
         [HttpPost]
         public void Post([FromBody] User data)
         {
@@ -56,8 +54,7 @@ namespace Aquahach.Controllers
 
             db.SaveChanges();
         }
-
-        // DELETE api/values/5
+        
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

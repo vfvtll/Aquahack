@@ -42,9 +42,11 @@ namespace Aquahach.Controllers
             {
                 AquahackContext result = new AquahackContext();
                 var data = result.Blogs.Where(c => c.Id == id);
+                var comments = result.Comments.Where(c => c.BlogId == id).Take(10);
                 var response = new
                 {
-                    data = data.ToList()
+                    data = data.ToList(),
+                    comments = comments.ToList()
                 };
                 return Ok(response);
             }

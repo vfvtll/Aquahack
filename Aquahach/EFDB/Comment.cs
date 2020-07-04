@@ -8,14 +8,10 @@ namespace Aquahach.EFDB
     {
         [Key]
         public int Id { get; set; }
-        [Key]
         public int UserId { get; set; }
-        [Key]
         public int BlogId { get; set; }
-        [MaxLength(50)]
-        public string Name { get; set; }
-        [MaxLength(500)]
-        public string Details { get; set; }
+        [MaxLength(250)]
+        public string Message { get; set; }
         public int? Photo { get; set; }
         [ForeignKey("Photo")]
         public Photo PhotoOb { get; set; }
